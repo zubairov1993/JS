@@ -104,13 +104,35 @@
 // console.log(double(3));
 // console.log(double(13));
 
-// Ручная привязка this: call, apply, bind
+// 4)Ручная привязка this: call, apply, bind
 
+//----------------------------------
 
+// const btn = document.querySelector('button');
 
-const btn = document.querySelector('button');
-
-btn.addEventListener('click', function(){
-    this.style.backgroundColor = 'red';
-});
+// btn.addEventListener('click', function(){
+//     this.style.backgroundColor = 'red';
+// });
 //когда обработчик событий написан класическим образом, контекст вызова будет сам элемент на котором произошло событие, как event.target
+
+//-----
+
+
+// const obj = {
+//     num: 5,
+//     sayNumber: function() {
+//         const say = () => {
+//             console.log(this);
+//         };
+        
+//         say();
+//     }
+// };
+
+// obj.sayNumber();
+
+//----
+
+// const double = a => a *2;
+
+// у стрелочной функции нет своего контекста вызова, она всегда будет его брать у родительского элемента
